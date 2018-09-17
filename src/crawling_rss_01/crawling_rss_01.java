@@ -64,8 +64,16 @@ public class crawling_rss_01 {
  try {
 
                 String line;
-                String test = "ffmpeg -i " + test1 + " -bsf:a aac_adtstoasc -vcodec copy -c copy -crf 50 C:\\Users\\Jonathan\\Downloads\\file"+i+".mp4";
-                Process p = Runtime.getRuntime().exec("cmd.exe /c start c:\\ffmpeg\\bin\\" + test);
+                //rmb to update the path if download it from github
+                
+                String test = "ffmpeg -i " + test1 + " -bsf:a aac_adtstoasc -vcodec copy -c copy -crf 50 C:\\Users\\user4\\Downloads\\file"+i+".mp4";
+                
+                        
+                //Process p = Runtime.getRuntime().exec("cmd.exe /c start c:\\ffmpeg\\bin\\" + test);
+                Process p = Runtime.getRuntime().exec("cmd.exe /c start C:\\Users\\user4\\Desktop\\lib\\FFmpeg\\bin\\" + test);
+                
+                        
+                        
                 BufferedReader in = new BufferedReader(
                         new InputStreamReader(p.getErrorStream()));
 
